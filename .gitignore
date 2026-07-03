@@ -1,0 +1,16 @@
+
+node_modules/
+
+dist/
+
+.env
+
+npm-debug.log*
+yarn-debug.log*
+
+.vscode/
+
+.DS_Store
+Thumbs.db
+
+prisma/dev.db
