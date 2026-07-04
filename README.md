@@ -98,7 +98,7 @@ VITE_AUTH_API_URL=http://localhost:3000
 VITE_LOGISTICS_API_URL=http://localhost:3000
 ```
 
-> Essas variáveis são opcionais — se não forem definidas, o frontend usa `http://localhost:3000` como padrão.
+> Essas variáveis são opcionais, se não forem definidas, o frontend usa `http://localhost:3000` como padrão.
 
 ### 3.3. Iniciar a aplicação
 
@@ -138,4 +138,6 @@ npm run dev
 
 **Frontend:** React, TypeScript, Vite, Tailwind CSS, React Router, Axios
 
-## Projeto para disciplina da faculdade.
+```
+Projeto para disciplina da faculdade.
+```
