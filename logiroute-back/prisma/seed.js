@@ -4,9 +4,8 @@ const bcrypt = require("bcrypt");
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log("🌱 Iniciando o plantio de dados (Seed)...");
+  console.log(" Iniciando o plantio de dados (Seed)...");
 
-  // ================= 1. USUÁRIOS =================
   const senhaHash = await bcrypt.hash("123456", 10);
 
   const usuario = await prisma.usuario.upsert({
@@ -20,7 +19,6 @@ async function main() {
   });
   console.log(` Usuário criado: ${usuario.nome}[cite: 1]`);
 
-  // ================= 2. MOTORISTAS =================
   const motoristasMock = [
     {
       nomeMotorista: "Adriana Souza",
@@ -83,7 +81,6 @@ async function main() {
   }
   console.log(` ${motoristasMock.length} Motoristas cadastrados.`);
 
-  // ================= 3. ENCOMENDAS =================
   const encomendasMock = [
     {
       nomeCliente: "Oficina Torque Certo",
@@ -146,7 +143,6 @@ async function main() {
     },
   ];
 
-  // Nota: Mapeei "statusColeta" do seu front para o campo "status" que usamos no back-end.
   for (const e of encomendasMock) {
     await prisma.encomenda.create({ data: e });
   }
